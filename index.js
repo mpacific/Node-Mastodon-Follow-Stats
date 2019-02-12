@@ -29,14 +29,14 @@ Twitter.followers(null, {}).then((unorderedFollowers) => {
     }
   })
   _.forEach(fileFollowers, (followerHandle, followerId) => {
-    if (!newUnfollowers[followerId]) {
-      newUnfollows.push(followerHandle)
+    if (!followers[followerId]) {
+      newUnfollowers.push(followerHandle)
     }
   })
 
-  console.log("New Followers", newFollowers.join("\n"))
+  console.log("New Followers\n", newFollowers.join("\n"))
   console.log("\n\n")
-  console.log("New Unfollowers", newUnfollowers.join("\n"))
+  console.log("New Unfollowers\n", newUnfollowers.join("\n"))
   console.log("\n\n")
 
   console.log(`Ended report at: ${new Moment().format()}`)
