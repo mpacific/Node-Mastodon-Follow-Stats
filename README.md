@@ -1,3 +1,5 @@
+## This project has been abandoned due to Twitter's new API price structure. A new Mastodon-based project is upcoming.
+
 # Node Twitter Follow Stats
 A script to run at a scheduled interval to retrieve new/removed follows and followers
 
