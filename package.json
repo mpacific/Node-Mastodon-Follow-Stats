@@ -1,10 +1,10 @@
 {
-  "name": "node-twitter-follow-stats",
+  "name": "node-mastodon-follow-stats",
   "version": "1.0.0",
-  "description": "Twitter Follow/Follower Stats",
+  "description": "Mastodon Follow/Follower Stats",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "Mike Pacific",
   "license": "ISC",
@@ -21,10 +21,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mpacific/Node-Twitter-Follow-Stats.git"
+    "url": "git+https://github.com/mpacific/Node-Mastodon-Follow-Stats.git"
   },
   "bugs": {
-    "url": "https://github.com/mpacific/Node-Twitter-Follow-Stats/issues"
+    "url": "https://github.com/mpacific/Node-Mastodon-Follow-Stats/issues"
   },
-  "homepage": "https://github.com/mpacific/Node-Twitter-Follow-Statss#readme"
+  "homepage": "https://github.com/mpacific/Node-Mastodon-Follow-Statss#readme"
 }
