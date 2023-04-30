@@ -9,16 +9,18 @@
   "author": "Mike Pacific",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "crypto-js": "^3.1.9-1",
     "dotenv": "^5.0.1",
-    "lodash": "^4.17.5",
     "moment": "^2.21.0",
-    "randomstring": "^1.1.5",
-    "request": "^2.83.0",
-    "request-promise": "^4.2.2"
+    "please-upgrade-node": "^3.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  },
+  "engines": {
+    "node": "18"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mpacific/Node-Mastodon-Follow-Stats.git"

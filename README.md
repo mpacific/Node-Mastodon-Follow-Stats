@@ -4,7 +4,7 @@ A script to run at a scheduled interval (or on demand) to retrieve new/removed f
 ## Installation
 - `npm install`
 - Copy `.envSample` to `.env` and update the values appropriately. You can get many of these values by creating a Mastodon app at `https://\[instance URL]/settings/applications`. The only permission you need is `read:follows`.
-- Create the `json` directory and within that folder, create `followers.json`, `following.json`, and `reciprocated.json` with proper read + write permissions and begin with the file content of `{}`
+- Create the `json` directory and within that folder, create `followers.json` with proper read + write permissions and begin with the file content of `{}`
 
 ## Running
 - `npm start`
