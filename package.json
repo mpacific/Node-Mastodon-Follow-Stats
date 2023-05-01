@@ -9,8 +9,9 @@
   "author": "Mike Pacific",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.4.0",
     "dotenv": "^5.0.1",
-    "moment": "^2.21.0",
+    "moment": "^2.29.4",
     "please-upgrade-node": "^3.2.0"
   },
   "devDependencies": {

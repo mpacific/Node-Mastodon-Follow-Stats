@@ -12,40 +12,43 @@ require('please-upgrade-node')(packageJSON, {
   try {
     console.log(`Started report at: ${new Moment().format()}`);
 
-    const unorderedFollowers = await Mastodon.followers(null, {});
-    let fileFollowers = fs.readFileSync('./json/followers.json');
+    const followersJSONPath = './json/followers.json';
+
+    let fileFollowers = fs.existsSync(followersJSONPath) ? fs.readFileSync(followersJSONPath) : '{}';
     if (fileFollowers) {
       fileFollowers = JSON.parse(fileFollowers);
     }
 
+    const unorderedFollowers = await Mastodon.followers(null, {});
+
     const followers = {};
-    _.forEach(Object.keys(unorderedFollowers).sort(), (key) => {
+    Object.keys(unorderedFollowers).sort().forEach((key) => {
       followers[key] = unorderedFollowers[key];
     });
 
     if (Object.keys(followers).length > 0) {
-      fs.writeFileSync('./json/followers.json', JSON.stringify(followers));
+      fs.writeFileSync(followersJSONPath, JSON.stringify(followers));
     }
 
-    const newFollowers = []; const
-      newUnfollowers = [];
-    _.forEach(followers, (followerHandle, followerId) => {
+    const newFollowers = [];
+    const newUnfollowers = [];
+    Object.keys(followers).forEach((followerId) => {
+      const followerHandle = followers[followerId];
       if (!fileFollowers[followerId]) {
         newFollowers.push(followerHandle);
       }
     });
-    _.forEach(fileFollowers, (followerHandle, followerId) => {
+    Object.keys(fileFollowers).forEach((followerId) => {
+      const followerHandle = fileFollowers[followerId];
       if (!followers[followerId]) {
         newUnfollowers.push(followerHandle);
       }
     });
 
-    console.log('New Followers\n', newFollowers.join('\n'));
-    console.log('\n\n');
-    console.log('New Unfollowers\n', newUnfollowers.join('\n'));
-    console.log('\n\n');
+    console.log(`New Followers\n${newFollowers.join('\n')}\n\n`);
+    console.log(`New Unfollowers\n${newUnfollowers.join('\n')}\n\n`);
   } catch (error) {
-    console.error(`Follower error: ${error}`);
+    console.log(`Follower error: ${error}`);
   }
   console.log(`Ended report at: ${new Moment().format()}`);
 })();
