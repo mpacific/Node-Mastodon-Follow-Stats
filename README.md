@@ -8,7 +8,7 @@ A script to run at a scheduled interval (or on demand) to retrieve new/removed f
 
 ## Installation
 * `npm install`
-* Copy `.envSample` to `.env` and update the values appropriately. You can get many of these values by creating a Mastodon app at `https://\[instance URL]/settings/applications`. The only permission you need is `read`.
+* Copy `.envSample` to `.env` and update the values appropriately. You can get many of these values by creating a Mastodon app at `https://[instance URL]/settings/applications`. The only permission you need is `read`.
 * Ensure the `json` directory has the correct write permissions.
 * If using the cron script:
   * `chmod +x run.sh`
