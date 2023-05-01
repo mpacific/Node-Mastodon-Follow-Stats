@@ -1,5 +1,5 @@
 # Node Mastodon Follow Stats
-A script to run at a scheduled interval (or on demand) to retrieve new/removed follows and followers. This is based off of the work of [Node-Twitter-Follow-Stats](https://github.com/mpacific/Node-Twitter-Follow-Stats)
+A script to run at a scheduled interval (or on demand) to retrieve new/removed followers. This is based off of the work of [Node-Twitter-Follow-Stats](https://github.com/mpacific/Node-Twitter-Follow-Stats)
 
 ## Requirements
 * Node 18
